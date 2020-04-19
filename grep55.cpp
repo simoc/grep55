@@ -4,8 +4,10 @@
 #include <cstring>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <algorithm>
 #include <stdlib.h>
+#include <cctype>
 
 #ifdef __GNUC__
 
@@ -221,7 +223,7 @@ int
 main(int argc, char *argv[])
 {
 	fs::path program = argv[0];
-	Settings settings(program.stem());
+	Settings settings(program.stem().string());
 
 	if (argc < 2)
 	{
