@@ -18,7 +18,7 @@ jobs:
     - name: build
       run: cmake -D CMAKE_CXX_COMPILER=g++-9 --build build
     - name: list generated files
-      run: ls -l
+      run: ls -l build
 
   build-windows:
 
@@ -31,5 +31,5 @@ jobs:
     - name: build
       run: cmake --build build --config Release
     - name: list generated files
-      run: ls -l
+      run: dir build
       
