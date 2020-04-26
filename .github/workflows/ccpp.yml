@@ -9,14 +9,14 @@ on:
 jobs:
   build-ubuntu:
 
-    runs-on: ubuntu-18.04-gcc-8
+    runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: mkdir build && cd build && cmake ..
+      run: mkdir build && cd build && cmake -D CMAKE_CXX_COMPILER=g++-9 ..
     - name: build
-      run: cmake --build build
+      run: cmake -D CMAKE_CXX_COMPILER=g++-9 --build build
 
   build-windows:
 
