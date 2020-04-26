@@ -11,7 +11,7 @@
 
 #ifdef __GNUC__
 
-#if __GNUC__ < 6
+#if __GNUC__ < 8
 #include <experimental/filesystem>
 namespace fs = std::experimental::filesystem;
 #else
