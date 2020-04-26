@@ -14,9 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER=g++-9 ..
+      run: mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER=g++-9 -G "Unix Makefiles" ..
     - name: build
-      run: cd build && cmake -DCMAKE_CXX_COMPILER=g++-9 --build .
+      run: cd build && make
     - name: list generated files
       run: ls -l build
 
