@@ -16,7 +16,7 @@ jobs:
     - name: configure
       run: mkdir build && cd build && cmake -DCMAKE_CXX_COMPILER=g++-9 ..
     - name: build
-      run: cmake -DCMAKE_CXX_COMPILER=g++-9 --build build
+      run: cd build && cmake -DCMAKE_CXX_COMPILER=g++-9 --build .
     - name: list generated files
       run: ls -l build
 
@@ -29,7 +29,7 @@ jobs:
     - name: configure
       run: mkdir build && cd build && cmake ..
     - name: build
-      run: cmake --build build --config Release
+      run: cd build && cmake --config Release --build .
     - name: list generated files
       run: dir build
       
