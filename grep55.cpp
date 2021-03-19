@@ -228,6 +228,7 @@ main(int argc, char *argv[])
 	if (argc < 2)
 	{
 		std::cerr << "Usage: " << argv[0] << " pattern [filename] ..." << std::endl;
+		std::cerr << "Recursively search for pattern in files and directories" << std::endl;
 		return 1;
 	}
 
